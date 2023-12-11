@@ -1,11 +1,22 @@
+var area = document.getElementById("area");
 
+function entrar(){
+    var nome = prompt("Digite o seu nome");
 
-var nome = prompt("Qual o seu nome");
+    if(nome === '' || nome === null){
+        alert("Ops, algo deu errado!!")
+        area.innerHTML = "Clique no botão para acessar..."
+    }else{     
+    area.innerHTML = "Bem vindo " + nome + " ";
 
-var sobrenome = prompt("Digite o seu sobre nome");
+    let botaSair = document.createElement("button");
+    botaSair.innerText = "Sair da conta";
+    botaSair.onclick = sair;
+    area.appendChild(botaSair);
+    }
+}
 
-console.log("Olá " + nome + " " + sobrenome);
-
-document.write("<h1>Bem vindo " + nome + " </h1>");
-
-document.write("<img src='https://sujeitoprogramador.com/steve.png' alt='Foto do Steve' />")
+function sair(){
+    alert("Ate mais!");
+    area.innerHTML = "Você saiu";
+}
