@@ -1,23 +1,24 @@
 
+// Switch
 
-// while = Quer dizer enquanto
+function pedir(){
+  var valor = prompt("Digite uma opção de 1 a 4");
 
-/* 
- var x = 5;
-
-while(x < 10){
-    document.write("<br> O valor X é: " + x);
-    
-
-    // Aumentando o valor do X
-     x++;
-}
-*/
-
-// FOR = PARA
-
-var valor = 30;
-
-for(a = 0; a < valor; a++){
-  document.write("<br> O valor do A é: " + a);
+  switch(Number(valor)){
+      case 1:
+        alert("Você escolheu 1 = Suco");
+        break;
+        case 2:
+          alert("Você escolheu 2 = Agua gelada");
+          break;
+          case 3:
+            alert("Você escolheu 3 = Sorvete");
+            break;
+            case 4:
+              alert("Você chamou o Garçom");
+              break;
+              default:
+                alert("Escolha uma opção entre 1 a 4");
+                break;
+  }
 }
