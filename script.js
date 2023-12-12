@@ -1,40 +1,23 @@
-var area = document.getElementById("area");
 
-function entrar(){
-    var nome = prompt("Digite o seu nome");
 
-    if(nome === '' || nome === null){
-        alert("Ops, algo deu errado!!")
-        area.innerHTML = "Clique no botão para acessar..."
-    }else{     
-    area.innerHTML = "Bem vindo " + nome + " ";
+// while = Quer dizer enquanto
 
-    let botaSair = document.createElement("button");
-    botaSair.innerText = "Sair da conta";
-    botaSair.onclick = sair;
-    area.appendChild(botaSair);
-    }
+/* 
+ var x = 5;
+
+while(x < 10){
+    document.write("<br> O valor X é: " + x);
+    
+
+    // Aumentando o valor do X
+     x++;
 }
+*/
 
-function sair(){
-    alert("Ate mais!");
-    area.innerHTML = "Você saiu";
-}
+// FOR = PARA
 
-function mediaAluno(nota1, nota2){
+var valor = 30;
 
-    var media = (nota1 + nota2) / 2;
-
-    if( media >= 7){
-      console.log("Aluno aprovado coma média: " + media)
-    }else if(media < 7){
-        console.log("Aluno reprovado com a média: " + media)
-    }
-}
-
-function aluno (nome, curso){
-
-    var mensagem = 'Seja bem vindo ' + nome + ' ao curso de ' + curso;
-
-    console.log(mensagem);
+for(a = 0; a < valor; a++){
+  document.write("<br> O valor do A é: " + a);
 }
