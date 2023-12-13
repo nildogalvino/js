@@ -1,24 +1,37 @@
+/*
+ Abaixo de 17 - Muito abaixo do peso
+ Entre 17 e 18,49 - Abaixo do peso
+ Entre 18,5 e 24,99 - Peso normal
+ Entre 25 e 29,99 - Acima do peso
+ */
 
-// Switch
+ // peso / (altura * altura);
 
-function pedir(){
-  var valor = prompt("Digite uma opção de 1 a 4");
+var peso;
+var altura;
+var imc;
+var resultado;
 
-  switch(Number(valor)){
-      case 1:
-        alert("Você escolheu 1 = Suco");
-        break;
-        case 2:
-          alert("Você escolheu 2 = Agua gelada");
-          break;
-          case 3:
-            alert("Você escolheu 3 = Sorvete");
-            break;
-            case 4:
-              alert("Você chamou o Garçom");
-              break;
-              default:
-                alert("Escolha uma opção entre 1 a 4");
-                break;
+
+ function calcular(event){
+  event.preventDefault();
+
+  peso = document.getElementById('peso').value;
+  altura = document.getElementById('altura').value;
+
+  imc = peso / (altura * altura);
+
+  resultado = document.getElementById('resultado');
+
+  if(imc < 17){
+    resultado.innerHTML = '<br/> Seu resultado foi: ' + imc.toFixed(2) + '<br/> Cuidado você está muito abaixo do peso!';
+  }else if(imc > 17 && imc <= 18.99){
+    resultado.innerHTML = '<br/> Seu resultado foi: ' + imc.toFixed(2) + '<br/> Você esta baixo do peso!';
+  }else if(imc >= 18.5 && imc < 24.99){
+    resultado.innerHTML = '<br/> Seu resultado foi: ' + imc.toFixed(2) + '<br/> Você esta baixo do peso!';
+  }else if(imc > 25 && imc <=  29,99){
+    resultado.innerHTML = '<br/> Seu resultado foi: ' + imc.toFixed(2) + '<br/> Cuidado você esta acima do peso!';
+  }else if(imc >= 30){
+    resultado.innerHTML = '<br/> Seu resultado foi: ' + imc.toFixed(2) + '<br/> Você esta na obesidade!';
   }
 }

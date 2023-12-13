@@ -6,16 +6,19 @@
     <title>Curso JavaScript</title>
 </head>
 <body>
-    <h1>Escolha um item</h1>
+     
+    <form onsubmit="return calcular(event)">
+        <label>Digite o seu peso:</label> <br/>
+        <input type="text" name="peso" id="peso" placeholder="Exemplo 65"> <br/><br/>
 
-    <ul>
-        <li>1 - Suco</li>
-        <li>2 - Agua gelada</li>
-        <li>3 - Sorvete</li>
-        <li>4 - Chamar  o garçom</li>
-    </ul>
+        <label>Digite a sua Altura:</label> <br/>
+        <input type="text" name="altura" id="altura" placeholder="Exemplo 1.90"> <br/><br/>
 
-    <button onclick="pedir()">Pedir</button>
+        <input type="submit" value="Calcular IMC">
+
+    </form>
+
+    <div class="resultado"></div>
     
     <script src="script.js"></script>   
 </body>
